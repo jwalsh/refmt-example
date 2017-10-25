@@ -24,8 +24,27 @@ let eleven = increment (double 5);
 let add x y => x + y;
 let double x => x + x;
 
-let something = add double 1;
+let addtwo = add double 1;
+let three = addtwo 1
+`,
+  'fun (x: int) => fun (y: int): int => 1;',
+  'type foo = int => int => int;',
+  'let message = isMorning ? "Good morning!" : "Hello!";',
+  `
+type intCoordinates = (int, int, int);
+let buddy: intCoordinates = (10, 20, 20);
+type intCoordinatesAlias = coordinates int;
+let buddy: intCoordinatesAlias = (10, 20, 20);
+`,
+  `
+type payload =
+| BadResult int
+
+| GoodResult string
+
+| NoResult;
 `
+
 ];
 // convert the ocaml syntax to reason syntax
 examples.map(e => {
