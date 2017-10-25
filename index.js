@@ -4,7 +4,10 @@ const fs = require('fs');
 // console.log(typeof refmt);
 const examples = [
   'let    greet    =    fun    name    =>    "Hello "   ^     name;',
-  'let    a   = 1'
+  'greet    "world!"    ;     /* "Hello world!" */',
+  'let    a   = 1',
+  'let add =fun x y  z  => x  + y + z;',
+  'add a  /* 1 */2   3     /* 6 */ '
 ];
 // convert the ocaml syntax to reason syntax
 examples.map(e => {
