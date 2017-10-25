@@ -13,6 +13,19 @@ const examples = [
   let part1 = "Hello";
   part1 ^ " " ^ name
 };`,
+  `
+let increment x => x + 1;
+let double x => x + x;
+
+let eleven = increment (double 5);
+`,
+
+  `
+let add x y => x + y;
+let double x => x + x;
+
+let something = add double 1;
+`
 ];
 // convert the ocaml syntax to reason syntax
 examples.map(e => {
